@@ -1,0 +1,257 @@
+/* CreateProfile.css */
+
+.create-profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    }
+  
+  .profile-picture-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .profile-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .profile-placeholder {
+    font-size: 14px;
+    color: #ccc;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .profile-picture-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .profile-type {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .profile-type label {
+    font-style: italic;
+    margin-right: 5px;
+  }
+  
+  .profile-type select {
+    width: 120px;
+    height: 30px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .profile-info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .name-input,
+  .followers-input {
+    font-size: 16px;
+    padding: 6px;
+    width: 240px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .followers-input {
+    order: 1;
+    margin-left: 10px;
+  }
+  
+  .profile-bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .profile-bio label {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .bio-input {
+    width: 300px;
+    height: 80px;
+    resize: vertical;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  .niche {
+    display: grid;
+    grid-template-columns: repeat(4, 85px);
+    grid-gap: 5px;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .niche label {
+    font-style: normal;
+  }
+  
+  .niche-tile {
+    padding: 6px;
+    margin: 0;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .niche-tile.selected {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .niche-tile.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+  
+  .reel-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .reel-container label {
+    font-style: italic;
+  }
+  
+  .reel {
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .reel-placeholder-box {
+    width: 200px;
+    height: 200px;
+    background-color: #f5f5f5;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #999;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .reel-preview {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  
+  .reel-preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .reel-preview-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .reel-input {
+    display: none;
+  }
+  
+  label[for^="reel"] {
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    font-family: Arial, sans-serif;
+  }
+  
+  label[for^="reel"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .reel2-preview,
+  .reel3-preview {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  
+  .reel2-preview-image,
+  .reel3-preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .reel2-preview-video,
+  .reel3-preview-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .reel2-placeholder-box,
+  .reel3-placeholder-box {
+    width: 200px;
+    height: 200px;
+    background-color: #f5f5f5;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #999;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
