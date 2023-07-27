@@ -6,6 +6,7 @@ import Login from './Login';
 import Home from './Home';
 import SignUp from './SignUp';
 import CreateProfile from './CreateProfile';
+import Filters from './Filters';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/createprofile" element={<CreateProfile />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/filters" element={<Filters />} />
       </Routes>
     </Router>
   );
