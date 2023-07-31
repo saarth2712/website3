@@ -38,8 +38,8 @@ const CreateProfile = () => {
     setImgs(data.result)
   })
   data.readAsDataURL(event.target.files[0])
-  const result = await data.result
-  console.log(data)
+  // const result = await data.result
+  // console.log(data)
   };
 
   const handleNameChange = (event) => {
@@ -69,16 +69,49 @@ const CreateProfile = () => {
   const handleReel1Change = (event) => {
     const selectedFile = event.target.files[0];
     setReel1(selectedFile);
+    
+    console.log(event.target.files)
+    const data = new FileReader()
+    data.onload = function(){
+      console.log(data.result)
+    }
+    data.addEventListener('load',() => {
+      setImgs(data.result)
+    })
+    data.readAsDataURL(event.target.files[0])
+
+
+
   };
   
   const handleReel2Change = (event) => {
     const selectedFile = event.target.files[0];
     setReel2(selectedFile);
+
+    console.log(event.target.files)
+    const data = new FileReader()
+    data.onload = function(){
+      console.log(data.result)
+    }
+    data.addEventListener('load',() => {
+      setImgs(data.result)
+    })
+    data.readAsDataURL(event.target.files[0])
   };
 
   const handleReel3Change = (event) => {
     const selectedFile = event.target.files[0];
     setReel3(selectedFile);
+
+    console.log(event.target.files)
+    const data = new FileReader()
+    data.onload = function(){
+      console.log(data.result)
+    }
+    data.addEventListener('load',() => {
+      setImgs(data.result)
+    })
+    data.readAsDataURL(event.target.files[0])
   };
 
   const handleCreateProfile = () => {
