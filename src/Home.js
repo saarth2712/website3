@@ -5,10 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram} from '@fortawesome/free-brands-svg-icons';
 import { faComment, faFilter } from '@fortawesome/free-solid-svg-icons';
 
-import Imran from '/Users/saarth2712/website3/src/profiles/IMG_3270.jpg';
-import Imran_Reel1 from '/Users/saarth2712/website3/src/profiles/RPReplay_Final1686198506.mov';
-import Imran_Reel2 from '/Users/saarth2712/website3/src/profiles/IMG_3311.jpg';
-import Imran_Reel3 from '/Users/saarth2712/website3/src/profiles/RPReplay_Final1686198482.mov';
+import Imran from './profiles/IMG_3270.jpg';
+import Imran_Reel1 from './profiles/RPReplay_Final1686198482.mov';
+import Imran_Reel2 from './profiles/IMG_3311.jpg';
+import Imran_Reel3 from './profiles/RPReplay_Final1686198506.mov';
 
 const profiles = [
   {

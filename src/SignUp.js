@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './SignUp.css';
-import logo from '/Users/saarth2712/website3/src/Aire.png'; 
+import logo from './Aire.png'; 
 
 function SignUp() {
   const [email, setEmail] = useState('');

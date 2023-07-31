@@ -23,9 +23,23 @@ const CreateProfile = () => {
     'Education', 'Dance', 'Comedy', 'Cars', 'Bollywood', 'Finance'
   ];
 
-  const handleImageChange = (event) => {
-    const selectedFile = event.target.files[0];
-    setProfilePicture(selectedFile);
+  const [imgs, setImgs] = useState()
+
+   const handleImageChange = async (event) => {
+  setProfilePicture(event.target.files[0]);
+
+
+  console.log(event.target.files)
+  const data = new FileReader()
+  data.onload = function(){
+    console.log(data.result)
+  }
+  data.addEventListener('load',() => {
+    setImgs(data.result)
+  })
+  data.readAsDataURL(event.target.files[0])
+  const result = await data.result
+  console.log(data)
   };
 
   const handleNameChange = (event) => {
