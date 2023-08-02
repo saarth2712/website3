@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './CreateProfile.css'; 
 import {Link, useNavigate } from 'react-router-dom';
 
@@ -15,6 +15,9 @@ const CreateProfile = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const navigate = useNavigate();
 
+  const infoDict = useRef({"niche":[], "reel":[]})
+  
+
   const maxSelectedNiche = 3;
 
   const niches = [
@@ -29,10 +32,11 @@ const CreateProfile = () => {
   setProfilePicture(event.target.files[0]);
 
 
-  console.log(event.target.files)
+  // console.log(event.target.files)
   const data = new FileReader()
   data.onload = function(){
-    console.log(data.result)
+    // console.log(data.result)
+    infoDict.current["profilePicture"] = data.result
   }
   data.addEventListener('load',() => {
     setImgs(data.result)
@@ -44,41 +48,60 @@ const CreateProfile = () => {
 
   const handleNameChange = (event) => {
     setName(event.target.value);
+    infoDict.current["name"] = event.target.value
   };
 
   const handleFollowersChange = (event) => {
     setFollowers(event.target.value);
+    infoDict.current["followers"] = event.target.value
   };
 
   const handleBioChange = (event) => {
     setBio(event.target.value);
+    infoDict.current["bio"] = event.target.value
   };
   
   const handleProfileTypeChange = (event) => {
     setProfileType(event.target.value);
+    // console.log(event.target.value)
+    if (event.target.value == 'creator'){
+      infoDict.current["isBrand"] = false
+    }
+    else{
+      infoDict.current["isBrand"] = true
+    }
+
   };
 
   const handleNicheClick = (niche) => {
     if (selectedNiche.includes(niche)) {
       setSelectedNiche((prevSelected) => prevSelected.filter((item) => item !== niche));
+      infoDict.current["niche"].splice(infoDict.current["niche"].indexOf(niche));
+      
     } else if (selectedNiche.length < maxSelectedNiche) {
       setSelectedNiche((prevSelected) => [...prevSelected, niche]);
+
+      // console.log(niche)
+      infoDict.current["niche"].push(niche);
     }
+
+    // console.log(infoDict)
   };
 
   const handleReel1Change = (event) => {
     const selectedFile = event.target.files[0];
     setReel1(selectedFile);
-    
     console.log(event.target.files)
     const data = new FileReader()
     data.onload = function(){
-      console.log(data.result)
+      // console.log(data.result)
+      infoDict.current["reel"].push(data.result);
     }
     data.addEventListener('load',() => {
       setImgs(data.result)
     })
     data.readAsDataURL(event.target.files[0])
+
 
 
 
@@ -88,10 +111,11 @@ const CreateProfile = () => {
     const selectedFile = event.target.files[0];
     setReel2(selectedFile);
 
-    console.log(event.target.files)
+    // console.log(event.target.files)
     const data = new FileReader()
     data.onload = function(){
-      console.log(data.result)
+      // console.log(data.result)
+      infoDict.current["reel"].push(data.result)
     }
     data.addEventListener('load',() => {
       setImgs(data.result)
@@ -103,10 +127,11 @@ const CreateProfile = () => {
     const selectedFile = event.target.files[0];
     setReel3(selectedFile);
 
-    console.log(event.target.files)
+    // console.log(event.target.files)
     const data = new FileReader()
     data.onload = function(){
-      console.log(data.result)
+      // console.log(data.result)
+      infoDict.current["reel"].push(data.result)
     }
     data.addEventListener('load',() => {
       setImgs(data.result)
@@ -117,7 +142,8 @@ const CreateProfile = () => {
   const handleCreateProfile = () => {
     // Implement your logic to create the profile here
     // For example, you can send the form data to a server or perform any other actions
-    navigate('/home')
+    console.log(infoDict.current)
+    // navigate('/home')
   };
 
   const handleNextStep = () => {
