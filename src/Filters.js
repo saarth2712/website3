@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Range } from 'react-range';
-// import './Filter.css';
+import './Filter.css';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment, faHome } from '@fortawesome/free-solid-svg-icons';

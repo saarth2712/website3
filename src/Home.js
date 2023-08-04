@@ -55,7 +55,7 @@ const HomeScreen = () => {
   const navigate = useNavigate();
 
   const handleFilterClick = () => {
-    navigate('/')
+    navigate('/filters')
   };
 
   const handleChatClick = () => {

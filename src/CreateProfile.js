@@ -23,6 +23,7 @@ const CreateProfile = () => {
     'Education', 'Dance', 'Comedy', 'Cars', 'Bollywood', 'Finance'
   ];
 
+  // eslint-disable-next-line 
   const [imgs, setImgs] = useState()
 
    const handleImageChange = async (event) => {
@@ -38,8 +39,6 @@ const CreateProfile = () => {
     setImgs(data.result)
   })
   data.readAsDataURL(event.target.files[0])
-  // const result = await data.result
-  // console.log(data)
   };
 
   const handleNameChange = (event) => {
