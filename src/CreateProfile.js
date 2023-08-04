@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './CreateProfile.css'; 
 import {Link, useNavigate } from 'react-router-dom';
 
@@ -64,7 +64,7 @@ const CreateProfile = () => {
   const handleProfileTypeChange = (event) => {
     setProfileType(event.target.value);
     // console.log(event.target.value)
-    if (event.target.value == 'creator'){
+    if (event.target.value === 'creator'){
       infoDict.current["isBrand"] = false
     }
     else{
@@ -143,7 +143,17 @@ const CreateProfile = () => {
     // Implement your logic to create the profile here
     // For example, you can send the form data to a server or perform any other actions
     console.log(infoDict.current)
-    // navigate('/home')
+    const [temp, setTemp] = useState(0);
+
+    useEffect(() =>{
+      const fetchData = async() =>{
+        const result = await fetch("http://localhost:1337/print")
+        console.log(result)
+      }
+      fetchData();
+    })
+    
+    navigate('/home')
   };
 
   const handleNextStep = () => {
