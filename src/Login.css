@@ -1,49 +1,94 @@
+.login-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -2vw;
+  width: 100%;
+}
+
+.login-logo {
+  width: 15vw;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  width: 80%;
+  border: 2px solid black;
+}
+
+.bann {
+  width: 40%;
+  border: 2px solid black;
+}
+
 .login-container {
-    max-width: 400px;
-    max-height: 500px;
-    margin: 150px auto; /* Increase the margin-top value to move it further down */
-    padding: 20px;
-    border-radius: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  width: 40%;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border: 2px solid black;
+  text-align: center;
+  width: 35%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   }
-  
-  .logo {
-    max-width: 100px;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    border-radius: 50px;
-    margin-bottom: 50px;
-  }
+
+.login-container label {
+  font-size: 30px;
+  width: 70%;
+  color: black;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
 
   form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 40px;
   }
   
   .login-input {
-    width: 70%;
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid black;
-    border-radius: 3px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 300px;
+    height: 20px;
+    font-size: 16px;
   }
   
   .login-button {
-    width: 30%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 25px;
   }
   
   .login-button:hover {
-    background-color: #0056b3;
+    background-color: black;
+    color: white;
   }
   
   .signup-link {
@@ -51,7 +96,13 @@
   }
   
   .signup-link a {
-    color: #007bff;
-    text-decoration: none;
+    color: black;
+    text-decoration: underline;
+  }
+
+  .tc {
+    font-size: 12px;
+    color: #777;
+    text-align: center;
   }
   

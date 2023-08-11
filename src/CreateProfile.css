@@ -1,31 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
-
-body {
-  margin: 0;
-  padding: 0;
+.create-profile {
+  justify-content: center;
 }
 
-.cp {
+bod {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 85vh;
-  width: 45vw;
-  border: 2px solid white;
-  margin: 0 auto; 
-  margin-top: 15vh;
-  border-radius: 20px;
-}
-
-.header {
-  font-size: 75px;
-  font-style: italic;
-  font-weight: bold;
-  font-family: 'League Spartan', sans-serif;
-  color: black;
-  margin-bottom: 40px;
-  margin-top: -10vh;
+  justify-content: center; 
+  margin-top: 50px;
 }
 
 .create-profile-container {
@@ -37,8 +18,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 50vh;
-  width: 25vw;
+  height: 500px;
+  width: 40%;
 }
 
 .profile-picture-circle {
@@ -185,6 +166,7 @@ body {
   box-shadow: none;
   vertical-align: top; 
 }
+
 .niche {
   margin-top: 30px; 
   width: 100%;

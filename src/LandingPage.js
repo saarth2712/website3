@@ -1,6 +1,6 @@
 import React from 'react';
 import './LandingScreen.css';
-import logo from './Aire_Final_Logo.png';
+import logo from './Aire_Final_Logo.jpg';
 import creator from './A_Creator.png';
 import brand from './A_Brand.png';
 import { useNavigate } from 'react-router-dom';

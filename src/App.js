@@ -5,17 +5,18 @@ import LandingPage from './LandingPage';
 import Login from './Login';
 import Home from './Home';
 import SignUp from './SignUp';
-import CreateProfile from './CreateProfile';
+import CreateAccount from './CreateAccount';
 import Filters from './Filters';
 
 function App() {
+
   return (
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/createprofile" element={<CreateProfile />} />
+        <Route path="/createaccount" element={<CreateAccount />} />
         <Route path="/home" element={<Home />} />
         <Route path="/filters" element={<Filters />} />
       </Routes>
