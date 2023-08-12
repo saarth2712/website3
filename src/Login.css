@@ -78,7 +78,7 @@
     font-weight: bold;
     text-decoration: none;
     border: 0.125vw solid black;
-    border-radius: 10px;
+    border-radius: 0.5vw;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 1vw;

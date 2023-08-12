@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './SignUp.css';
 import logo from './Aire_Final_Logo.jpg';
-import banner from './Aire_Bann.png';
 import su_banner from './Aire_SignUp.png';
 
 function SignUp() {
@@ -13,7 +12,7 @@ function SignUp() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add sign up logic here
-    navigate('/createprofile');
+    navigate('/createaccount');
   };
 
   return (

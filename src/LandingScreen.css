@@ -1,42 +1,36 @@
 .landing-page{
-text-align: center;
-justify-content: center;
+display: flex;
+flex-direction: column;
 }
 
-.headin {
+.lp-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-content: center;
   background-color: white;
   width: 100%;
-  height: 100px;
+  height: 10vw;
 }
 
-.logo-contain {
-  margin-left: 55px;
-  margin-top: 40px;
-}
 
 .logo-header {
-  scale: 0.5;
+  width: 15vw;
+  margin-left: 10%;
 }
 
 .nav-links {
-  margin-top: 45px;
+  display: flex; /* Use flex display for vertical alignment */
+  align-items: center; /* Vertically center-align the content */
+  margin-right: 5%;
+  margin-top: 0.5vw;
 }
 
 .nav-links a {
-font-size: 20px;
+font-size: 1.2vw;
 font-weight: bold;
-margin-left: 20px;
 text-decoration: none;
 color: #333;
-margin-right: 50px;
-font-size: 15px;
-}
-
-.nav-links a:last-child {
-margin-right: 200px; 
+margin-right: 5vw;
 }
 
 .nav-links a:hover {
@@ -49,31 +43,29 @@ color: #555;
   align-items: center; /* Center vertically */
   text-align: center;
   background-color: white;
-  padding: 30px 0;
-  height: 400px;
+  height: 27.5vw;
 }
 
 .caption { 
   width: 75%;
-  font-size: 80px;
+  font-size: 6vw;
   color: black;
-  margin: 0 auto; 
-  padding: 10px;
   display: inline-block;
+  font-weight: 300;
 }
 
 .typing-effect {
-  font-size: 80px;
+  font-size: 6vw;
   display: inline-block; /* This will keep the typing effect within the flow of the text */
   white-space: nowrap;
 }
 
 .line1 {
   width: 15%;
-  height: 1px;
+  height: 0.1vw;
   background-color: black;
-  margin-left: 120px;
-  margin-top: 40px;
+  margin-left: 10%;
+  margin-top: 5vw;
 }
 
 .cta1 {
@@ -81,36 +73,35 @@ color: #555;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 1vw;
 }
 
 .cta1 p {
-  font-size: 30px;
+  font-size: 2.25vw;
   width: 40%;
   color: black;
-  margin-bottom: 10px;
+  margin-bottom: 1.5vw;
+  margin-top: 1vw;
 }
-
 
 .cta1 button{
   display: inline-block;
-  padding: 12px 24px;
+  padding: 0.75vw 1.5vw;
   background-color: white;
   color: black;
-  font-size: 18px;
+  font-size: 1.2vw;
   font-weight: bold;
   text-decoration: none;
-  border: 2px solid black;
-  border-radius: 10px;
+  border: 0.125vw solid black;
+  border-radius: 0.5vw;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 30px;
 }
 
 .cta1 button::after {
   content: '\2192'; /* Unicode for right arrow (→) */
-  font-size: 24px;
-  margin-left: 5px; /* Adjust the space between the button text and the arrow */
+  font-size: 1.6vw;
+  margin-left: 0.25vw; /* Adjust the space between the button text and the arrow */
 }
 
 .cta1 button:hover {
@@ -120,86 +111,94 @@ color: #555;
 
 .line2 {
   width: 15%;
-  height: 1px;
+  height: 0.1vw;
   background-color: black;
   margin-left: auto;
-  margin-top: 40px;
-  margin-right: 120px;
+  margin-top: 1vw;
+  margin-right: 10%;
 }
 
 .section-creator {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 30px;
-  padding: 20px;
+  flex-direction: row;
+  margin-top: 3vw;
+  width: 80%;
   background-color: white;
-  border-radius: 10px;
+  margin-left: 10%;
+}
+
+.creator-image {
+  width: 50%;
+}
+
+.creator-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.creator-info label {
+  font-size: 1.75vw;
+  font-weight: bold;
+  margin: 0vw auto;
+  margin-bottom: 0.5vw;
+}
+
+.creator-info p {
+  font-size: 1.2vw;
+  width: 80%;
+  align-self: center;
+  margin: 0vw auto;
 }
 
 .section-brand {
   display: flex;
   align-items: center;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  margin-top: 30px;
-  padding: 20px;
+  flex-direction: row;
+  margin-top: 3vw;
+  width: 80%;
   background-color: white;
-  border-radius: 10px;
+  margin-left: 10%;
 }
 
-.section-brand .aa {
-  width: 500px;
-  height: 500px;
-  object-fit: contain;
-  margin-right: 200px;
-  scale: 0.75;
-}
-
-.a {
+.brand-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 40%;
-  margin-left: 100px;
+  font-size: 1.2vw;
+  align-self: center;
+  text-align: center;
+  margin: 0vw auto;
 }
 
-.aa {
-  width: 500px;
-  height: 500px;
-  object-fit: contain;
-}
-
-.b {
-  width: 60%;
-  padding-left: 30px;
-}
-.b label {
-  font-size: 25px;
+.brand-info label {
+  font-size: 1.75vw;
   font-weight: bold;
-  font-style: italic;
-
+  margin-bottom: 0.5vw;
 }
 
-.b p {
-  font-size: 18px;
-  color: #333;
+.brand-info p {
+  font-size: 1.2vw;
+  width: 80%;
+  align-self: center;
+  margin: 0vw auto;
+}
+
+.brand-image {
+  width: 50%;
 }
 
 .footer {
   background-color: #f0f0f0;
-  padding: 20px;
-  margin-top: 50px;
-  height: 200px;
   display: flex;
   flex-direction: row;
+  margin-top: 3vw;
 }
 
 .footy {
-  width: 40%;
-  height: 90%;
-  margin-left: 200px;
-  margin-top: 20px;
+  margin-left: 15%;
+  margin-top: 1.5vw;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -208,32 +207,34 @@ color: #555;
 }
 
 .footy label {
-  font-size: 30px;
+  font-size: 2.5vw;
   color: black;
-  margin-bottom: -5px;
+  margin-bottom: -0.5vw;
 }
-
 
 .footy p {
-  font-size: 16px;
+  font-size: 1.2vw;
   color: black;
-  margin-bottom: -5px;
+  margin-bottom: 1vw;
 }
 
+.copyright {
+  margin-bottom: 1vw;
+  font-size: 1.2vw;
+}
 
 .social-icons {
   display: flex;
   align-items: center; /* Align icons vertically with the text */
-  margin-top: 15px;
 }
 
 .social-icons > * {
-  margin-right: 10px; /* Add spacing between the icons */
+  margin-right: 1vw; /* Add spacing between the icons */
 }
 
 .twitter-icon,.instagram-icon,
 .linkedin-icon {
-  font-size: 20px; /* Adjust the icon size as needed */
+  font-size: 1.4vw; /* Adjust the icon size as needed */
 }
 
 .nav {
@@ -241,16 +242,15 @@ color: #555;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: 30px;
-  margin-left: 300px;
+  margin-top: 2vw;
+  margin-left: 30%;
 }
 
 .nav a {
-  margin-left: 20px;
   text-decoration: none;
   color: #333;
-  margin-bottom: 25px;
-  font-size: 20px;
+  margin-bottom: 2vw;
+  font-size: 1.4vw;
 }
 
 

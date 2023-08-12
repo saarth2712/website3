@@ -12,7 +12,12 @@ const CreateAccount = () => {
         setSelectedAccountType(type === selectedAccountType ? "" : type);
     };
 
-    const navigate = useNavigate();
+    const navigate = useNavigate(); 
+
+    const handleCreateAccountClick = () => {
+      navigate('/home'); 
+    };
+  
 
     const maxSelectedNiche = 3;
   
@@ -141,7 +146,7 @@ const CreateAccount = () => {
                     <p> Upload atleast 1 post and 1 reel</p>
                 </div>
             </div>
-            <button className="create-account-button"> Create Account </button>
+            <button className="create-account-button" onClick={handleCreateAccountClick}> Create Account </button>
             <div className='account-tc'> By creating an account, you agree to our Terms. See how we use your data in our Privacy Policy. </div>
         </div>
     )

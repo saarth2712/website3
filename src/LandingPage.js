@@ -2,7 +2,7 @@ import React from 'react';
 import './LandingScreen.css';
 import logo from './Aire_Final_Logo.jpg';
 import creator from './A_Creator.png';
-import brand from './A_Brand.png';
+import brand from './Aire_Brand_Store.png';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin, faInstagram} from '@fortawesome/free-brands-svg-icons';
@@ -17,10 +17,8 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page"> 
-      <div className="headin">
-        <div className="logo-contain">
+      <div className="lp-header">
           <img src = {logo} alt="Aire Logo" className="logo-header" />
-        </div>
         <div className="nav-links">
           <a href="/">Home</a>
           <a href="/services">Services</a>
@@ -56,22 +54,18 @@ const LandingPage = () => {
       </div>
       <div className="line2"></div> 
       <div className='section-creator'>
-        <div className='a'>
-          <img src = {creator} alt="I'm a creator" className="aa" />
-        </div>
-        <div className='b'>
+        <img src = {creator} alt="I'm a creator" className="creator-image" />
+        <div className='creator-info'>
           <label> I'm a Creator </label>
           <p>Join Aire and match with creators and brands for awesome collabs</p>
         </div>
       </div>
       <div className='section-brand'>
-        <div className='a'>
-          <img src = {brand} alt="I'm a brand" className="aa" />
-        </div>
-        <div className='b'>
+        <div className='brand-info'>
           <label> I'm a Brand </label>
           <p> Join Aire and get influencers to promote their brand. </p>
         </div>
+        <img src = {brand} alt="I'm a brand" className="brand-image" />
       </div>
       <div className="line1"></div> 
       <div className='cta1' > 
@@ -82,8 +76,8 @@ const LandingPage = () => {
       <div className="footer">
         <div className='footy'>
             <label> AIRE </label>
-            <p> Kalyani Nagar, Pune | +91702092215/ | aire.collab@gmail.com </p>
-            <p> &copy; {new Date().getFullYear()} Aire </p>
+            <p> Kalyani Nagar, Pune | +91702092215 | aire.collab@gmail.com </p>
+            <div className='copyright'> &copy; {new Date().getFullYear()} Aire </div>
             <div className="social-icons">
               <FontAwesomeIcon icon={faInstagram} className="instagram-icon" />
               <FontAwesomeIcon icon={faTwitter} className="twitter-icon" />
