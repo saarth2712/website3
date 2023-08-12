@@ -18,16 +18,12 @@ function SignUp() {
 
   return (
     <div className='signup-page'>
-      <div className="head">
-        <div className="logo-contain">
-          <img src = {logo} alt="Aire Logo" className="logo-header" />
-        </div>
+      <div className="login-header">
+          <img src = {logo} alt="Aire Logo" className="login-logo" />
       </div>
-      <div className='body'>
-        <div className='cont'>
-          <img src={su_banner} alt="Banner" className="bann" />
+      <div className='signup-body'>
           <div className="signup-container">
-            <label> Welcome Aboard! Join us </label>
+            <label> Welcome Aboard! We've been waiting. </label>
             <form onSubmit={handleSubmit}>
                 <input
                   type="email"
@@ -51,7 +47,7 @@ function SignUp() {
               <em>Don't have an account? <Link to="/login">Login</Link></em>
             </p> 
           </div>
-        </div>
+          <img src={su_banner} alt="Banner" className="signup-bann" />
       </div>
       <div className='tc'> By signing up, you agree to our Terms. See how we use your data in our Privacy Policy. </div>
     </div>
