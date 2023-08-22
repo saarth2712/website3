@@ -1,65 +1,15 @@
-.editprofile-screen {
+.edit-account {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-  }
-
-.header-bar {
-        background-color: white;
-        color: black;
-        padding: 10px;
-        text-align: center;
-        align-items: center;
-        font-size: 24px;
-        font-weight: bold;
-        height: 10vh;
-        width: 48.7vw;
-        margin-top: 60px;
-        margin-bottom: -101px;
-        border: 2px solid black;
-        border-radius: 5x;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        border-bottom: 2px solid white;
-
-        
-}
-.filter-icon {
-    font-size: 30px;
-    cursor: pointer;
-    color: black;
-    transition: opacity 0.3s;
-    margin-left: -150px;
-}
-  
-.chat-icon {
-    font-size: 30px;
-    cursor: pointer;
-    color: black;
-    margin: 0 10px;
-    transition: opacity 0.3s;
-    margin-right: -150px;
 }
 
-.profile-container {
-    width: 50vw;
-    height: 275vh;
-    border: 2px solid black;
-    border-radius: 5x;
-    margin: 0px auto;
-    margin-top: 100px;
+.edit-account-header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
     background-color: white;
+    width: 100%;
+    height: 10vw;
 }
-
-.dp {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-  }
-  
-.pen-icon {
-    font-size: 40px;
-}
-  

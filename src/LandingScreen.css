@@ -225,7 +225,8 @@ color: #555;
 
 .social-icons {
   display: flex;
-  align-items: center; /* Align icons vertically with the text */
+  align-items: center;
+  margin-bottom: 1vw; /* Align icons vertically with the text */
 }
 
 .social-icons > * {
@@ -243,7 +244,7 @@ color: #555;
   flex-direction: column;
   justify-content: flex-start;
   margin-top: 2vw;
-  margin-left: 30%;
+  margin-left: 50%;
 }
 
 .nav a {

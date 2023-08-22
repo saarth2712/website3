@@ -1,0 +1,62 @@
+/* Trial.css */
+
+/* Add styling for the trial filter */
+.trial {
+    display: flex;
+    /* Add more styling as needed */
+}
+  
+.bar-side {
+    width: 25%;
+    padding: 2vw;
+    background-color: #f0f0f0;
+    /* Add more styling as needed */
+}
+  
+.trial-nav-icons {
+    display: flex;
+    align-items: center;
+}
+  
+.trial-filter-icon,
+.trial-setting-icon {
+    margin: 0 1vw;
+    cursor: pointer;
+}
+  
+.trial-collabs {
+    margin-top: 2vw;
+}
+
+.trial-filter label {
+  margin-bottom: 1vw;
+}
+
+.trial-distance {
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-slider-track {
+  background-color: #3498db;
+}
+
+/* Custom handle style */
+.custom-slider-handle {
+  background-color: #3498db;
+  border-color: #3498db;
+}
+
+/* Custom dot style */
+.custom-slider-dot {
+  background-color: #bdc3c7;
+}
+
+/* Custom active dot style */
+.custom-slider-dot-active {
+  background-color: #e74c3c;
+}
+
+.trial-filter button {
+  margin-top: 2vw;
+}

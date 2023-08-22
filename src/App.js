@@ -7,6 +7,7 @@ import Home from './Home';
 import SignUp from './SignUp';
 import CreateAccount from './CreateAccount';
 import Filters from './Filters';
+import EditProfile from './EditProfile';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/editprofile" element={<EditProfile />} />
         <Route path="/createaccount" element={<CreateAccount />} />
         <Route path="/home" element={<Home />} />
         <Route path="/filters" element={<Filters />} />
