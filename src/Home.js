@@ -8,6 +8,8 @@ import {faFilter, faCog } from '@fortawesome/free-solid-svg-icons';
 import collab from './Aire_Bann.png';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
+import Modal from 'react-modal';
+
 import Imran from './profiles/IMG_3270.jpg';
 import Imran_Reel1 from './profiles/RPReplay_Final1686198482.mov';
 import Imran_Post1 from './profiles/IMG_3311.jpg';
@@ -113,6 +115,14 @@ const HomeScreen = () => {
   const applyfilter = () => {
       setCollabVisible(true);
       setFilterVisible(false);
+  };
+
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [selectedMedia, setSelectedMedia] = useState(null);
+
+  const openLightbox = (mediaUrl) => {
+    setSelectedMedia(mediaUrl);
+    setLightboxOpen(true);
   };
 
   return (
@@ -232,7 +242,7 @@ const HomeScreen = () => {
             {activeTab === 'posts' ? (
               <div className='posts-content'>
               {currentProfile.posts.map((imgSrc, index) => (
-                <div key={index} >
+                <div key={index} onClick={() => openLightbox(imgSrc)}>
                   <img className='home-post' src={imgSrc} alt='Post' />
                 </div>
               ))}
@@ -240,7 +250,7 @@ const HomeScreen = () => {
             ) : (
               <div className='reels-content'>
                 {currentProfile.reels.map((videoSrc, index) => (
-                  <div key={index}>
+                  <div key={index} onClick={() => openLightbox(videoSrc)}>
                     <video className='home-reel' controls>
                       <source src={videoSrc} type='video/mp4' />
                       Your browser does not support the video tag.
@@ -249,6 +259,28 @@ const HomeScreen = () => {
                 ))}
               </div>
             )}
+          <Modal
+            isOpen={lightboxOpen}
+            onRequestClose={() => setLightboxOpen(false)}
+            contentLabel='Media Lightbox'
+          >
+              <button className="close-button" onClick={() => setLightboxOpen(false)}>
+                &times;
+              </button>
+
+            {selectedMedia && (
+              <div className='lightbox-content'>
+                {selectedMedia.endsWith('.mp4') ? (
+                  <video className='lightbox-video' controls>
+                    <source src={selectedMedia} type='video/mp4' />
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <img className='lightbox-image' src={selectedMedia} alt='Enlarged Media' />
+                )}
+              </div>
+            )}
+          </Modal>
           </div> 
         </div>
       </div>

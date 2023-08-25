@@ -15,12 +15,16 @@ const LandingPage = () => {
     navigate('/SignUp');
   };
 
+  const goToLogin = () => {
+    navigate('/Login');
+  }
+
   return (
     <div className="landing-page"> 
       <div className="lp-header">
           <img src = {logo} alt="Aire Logo" className="logo-header" />
-          <div className="ca-nav-links">
-              <p>Already a user? <a href="/Login"> Login</a></p>
+          <div className="nav-links">
+            <a onClick={goToLogin}> Login </a>
           </div>
       </div>
       <div className='banner'>
@@ -70,6 +74,9 @@ const LandingPage = () => {
         <button onClick={goToSignUp}> JOIN NOW </button>
       </div>
       <div className="line2"></div> 
+      <div className='cta3'>
+       <p> Follow us <a onClick={() => window.open("https://www.instagram.com/aire_in/", "_blank")}> @aire_in </a> </p>
+      </div>
       <div className="footer">
         <div className='footy'>
             <label> AIRE </label>
@@ -82,9 +89,9 @@ const LandingPage = () => {
             <div className='copyright'> &copy; {new Date().getFullYear()} Aire </div>
         </div>
         <div className = 'nav'>
-          <a href="/Login">Login</a>
-          <a href="/how-it-works">How It Works?</a>
-          <a href="/contact">Contact Us</a>
+          <a onClick={goToLogin}> Login </a>
+          <a onClick={goToLogin}> How It Works? </a>
+          <a onClick={goToLogin}> Contact Us </a>
         </div>
       </div>    
     </div>
