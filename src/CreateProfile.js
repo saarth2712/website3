@@ -153,15 +153,6 @@ const CreateProfile = () => {
     // Implement your logic to create the profile here
     // For example, you can send the form data to a server or perform any other actions
     console.log(infoDict.current);
-    const [temp, setTemp] = useState(0);
-
-    useEffect(() => {
-      const fetchData = async () => {
-        const result = await fetch("http://localhost:1337/print");
-        console.log(result);
-      };
-      fetchData();
-    });
 
     navigate("/home");
   };
