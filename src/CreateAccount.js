@@ -86,48 +86,47 @@ const CreateAccount = () => {
       infoDict.current["profilePicture"] = data.result;
     };
     data.addEventListener("load", () => {
-      setImgs(data.result);
+      setImgs(URL.createObjectURL(event.target.files[0]));
+      //   setImgs(event.target.files[0]);
     });
     data.readAsDataURL(event.target.files[0]);
   };
 
   const handlePost1Change = (event) => {
     const selectedFile = event.target.files[0];
-    setPost1(selectedFile);
+    // setPost1(selectedFile);
 
     const data = new FileReader();
     data.onload = function () {
       infoDict.current["post"].push(data.result);
     };
     data.addEventListener("load", () => {
-      setPost1(data.result);
+      setPost1(URL.createObjectURL(event.target.files[0]));
     });
     data.readAsDataURL(event.target.files[0]);
   };
 
   const handlePost2Change = (event) => {
     const selectedFile = event.target.files[0];
-    setPost2(selectedFile);
 
     const data = new FileReader();
     data.onload = function () {
       infoDict.current["post"].push(data.result);
     };
     data.addEventListener("load", () => {
-      setImgs(post2);
+      setPost2(URL.createObjectURL(event.target.files[0]));
     });
     data.readAsDataURL(event.target.files[0]);
   };
   const handlePost3Change = (event) => {
     const selectedFile = event.target.files[0];
-    setPost3(selectedFile);
 
     const data = new FileReader();
     data.onload = function () {
       infoDict.current["post"].push(data.result);
     };
     data.addEventListener("load", () => {
-      setImgs(data.result);
+      setPost3(URL.createObjectURL(event.target.files[0]));
     });
     data.readAsDataURL(event.target.files[0]);
   };
@@ -138,40 +137,40 @@ const CreateAccount = () => {
   };
   const handleReel1Change = (event) => {
     const selectedFile = event.target.files[0];
-    setReel1(selectedFile);
+    // setReel1(selectedFile);
 
     const data = new FileReader();
     data.onload = function () {
       infoDict.current["reel"].push(data.result);
     };
     data.addEventListener("load", () => {
-      setImgs(data.result);
+      setReel1(URL.createObjectURL(event.target.files[0]));
     });
     data.readAsDataURL(event.target.files[0]);
   };
   const handleReel2Change = (event) => {
     const selectedFile = event.target.files[0];
-    setReel2(selectedFile);
+    // setReel2(selectedFile);
 
     const data = new FileReader();
     data.onload = function () {
       infoDict.current["reel"].push(data.result);
     };
     data.addEventListener("load", () => {
-      setReel2(data.result);
+      setReel2(URL.createObjectURL(event.target.files[0]));
     });
     data.readAsDataURL(event.target.files[0]);
   };
   const handleReel3Change = (event) => {
     const selectedFile = event.target.files[0];
-    setReel3(selectedFile);
+    // setReel3(selectedFile);
 
     const data = new FileReader();
     data.onload = function () {
       infoDict.current["reel"].push(data.result);
     };
     data.addEventListener("load", () => {
-      setReel3(data.result);
+      setReel3(URL.createObjectURL(event.target.files[0]));
     });
     data.readAsDataURL(event.target.files[0]);
   };
@@ -265,46 +264,80 @@ const CreateAccount = () => {
         <div className="media-upload">
           <div className="profile-picture">
             <p> Profile Picture </p>
-            <label htmlFor="profile-picture-input">
-              <div className="plus-icon">+</div>
-            </label>
-            <input
-              type="file"
-              accept="image/*"
-              id="profile-picture-input"
-              onChange={handleImageChange}
-            />
+            <>
+              {imgs ? (
+                <img src={imgs} alt="Uploaded" className="img-upload" />
+              ) : (
+                <>
+                  <label htmlFor="profile-picture-input">
+                    <div className="plus-icon">+</div>
+                  </label>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    id="profile-picture-input"
+                    onChange={handleImageChange}
+                  />
+                </>
+              )}
+            </>
           </div>
           <div className="account-posts">
             <p> Posts </p>
             <div className="posts">
-              <label htmlFor="post-input">
-                <div className="plus-icon">+</div>
-              </label>
-              <input
-                type="file"
-                accept="image/*"
-                id="post-input"
-                onChange={handlePost1Change}
-              />
-              <label htmlFor="post-input">
-                <div className="plus-icon">+</div>
-              </label>
-              <input
-                type="file"
-                accept="image/*"
-                id="post-input"
-                onChange={handlePost2Change}
-              />
-              <label htmlFor="post-input">
-                <div className="plus-icon">+</div>
-              </label>
-              <input
-                type="file"
-                accept="image/*"
-                id="post-input"
-                onChange={handlePost3Change}
-              />
+              <>
+                {post1 ? (
+                  <img src={post1} alt="Uploaded" className="img-upload" />
+                ) : (
+                  <>
+                    <label htmlFor="profile-picture-input">
+                      <div className="plus-icon">+</div>
+                    </label>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      id="profile-picture-input"
+                      onChange={handlePost1Change}
+                    />
+                  </>
+                )}
+              </>
+
+              <>
+                {post2 ? (
+                  <img src={post2} alt="Uploaded" className="img-upload" />
+                ) : (
+                  <>
+                    <label htmlFor="profile-picture-input">
+                      <div className="plus-icon">+</div>
+                    </label>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      id="profile-picture-input"
+                      onChange={handlePost2Change}
+                    />
+                  </>
+                )}
+              </>
+
+              <>
+                {post3 ? (
+                  <img src={post3} alt="Uploaded" className="img-upload" />
+                ) : (
+                  <>
+                    <label htmlFor="profile-picture-input">
+                      <div className="plus-icon">+</div>
+                    </label>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      id="profile-picture-input"
+                      onChange={handlePost3Change}
+                    />
+                  </>
+                )}
+              </>
             </div>
           </div>
           <div className="account-reels">

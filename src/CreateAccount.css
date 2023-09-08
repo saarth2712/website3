@@ -1,385 +1,395 @@
 .create-account {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .create-account-header {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    background-color: white;
-    width: 100%;
-    height: 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  background-color: white;
+  width: 100%;
+  height: 10vw;
 }
- 
+
 .ca-logo {
-    width: 15vw;
-    margin-left: 15%;
+  width: 15vw;
+  margin-left: 15%;
 }
 
 .ca-nav-links {
-    display: flex; /* Use flex display for vertical alignment */
-    align-items: center; /* Vertically center-align the content */
-    margin-right: 15%;
+  display: flex; /* Use flex display for vertical alignment */
+  align-items: center; /* Vertically center-align the content */
+  margin-right: 15%;
 }
 
 .ca-nav-links p {
-    font-size: 1.25vw;
+  font-size: 1.25vw;
 }
 
 .ca-nav-links a {
-    color: black;
+  color: black;
 }
 
 .create-head {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    margin-top: -3vw;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin-top: -3vw;
 }
 
 .create-head p {
-    font-size: 2.75vw;
-    font-weight: 450;
+  font-size: 2.75vw;
+  font-weight: 450;
 }
 
 .create-account-container {
-    display: flex;
-    flex-direction: row;
-    width: 70%;
+  display: flex;
+  flex-direction: row;
+  width: 70%;
 }
 
 .create-form {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .name {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin-top: 1vw;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 1vw;
 }
 
 .name label {
-    font-size: 1vw;
-    font-weight: 600;
-    margin-bottom: 0.75vw;
+  font-size: 1vw;
+  font-weight: 600;
+  margin-bottom: 0.75vw;
 }
 
 .name input {
-    height: 2.25vw;
-    border-radius: 0.5vw;
-    padding: 0.5vw 1vw;
-    border: 1px solid #ccc;
-    font-size: 1vw;
+  height: 2.25vw;
+  border-radius: 0.5vw;
+  padding: 0.5vw 1vw;
+  border: 1px solid #ccc;
+  font-size: 1vw;
 }
 
-
 .username {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin-top: 1vw;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 1vw;
 }
 
 .username label {
-    font-size: 1vw;
-    font-weight: 600;
-    margin-bottom: 0.75vw;
+  font-size: 1vw;
+  font-weight: 600;
+  margin-bottom: 0.75vw;
 }
 
 .username input {
-    height: 2.25vw;
-    border-radius: 0.5vw;
-    padding: 0.5vw 1vw;
-    border: 1px solid #ccc;
-    font-size: 1vw;
+  height: 2.25vw;
+  border-radius: 0.5vw;
+  padding: 0.5vw 1vw;
+  border: 1px solid #ccc;
+  font-size: 1vw;
 }
 
 .followers {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin-top: 1vw;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 1vw;
 }
 
 .followers label {
-    font-size: 1vw;
-    font-weight: 600;
-    margin-bottom: 0.75vw;
+  font-size: 1vw;
+  font-weight: 600;
+  margin-bottom: 0.75vw;
 }
 
 .followers input {
-    height: 2.25vw;
-    border-radius: 0.5vw;
-    padding: 0.5vw 1vw;
-    border: 1px solid #ccc;
-    font-size: 1vw;
+  height: 2.25vw;
+  border-radius: 0.5vw;
+  padding: 0.5vw 1vw;
+  border: 1px solid #ccc;
+  font-size: 1vw;
 }
 
 .account-type {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin-top: 1vw;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 1vw;
 }
 
 .account-type label {
-    font-size: 1vw;
-    font-weight: 600;
-    margin-bottom: 0.5vw;
+  font-size: 1vw;
+  font-weight: 600;
+  margin-bottom: 0.5vw;
 }
 
 .account-tags {
-    display: flex;
-    gap: 1%;
-    text-align: center;
+  display: flex;
+  gap: 1%;
+  text-align: center;
 }
 
 .account-tag {
-    cursor: pointer;
-    padding: 0.5vw 1vw;
-    border: 0.125vw solid black;
-    border-radius: 2vw;
-    transition: background-color 0.3s, color 0.3s;
-    width: 100%;
-    font-size: 1vw;
-    font-weight: 600;
+  cursor: pointer;
+  padding: 0.5vw 1vw;
+  border: 0.125vw solid black;
+  border-radius: 2vw;
+  transition: background-color 0.3s, color 0.3s;
+  width: 100%;
+  font-size: 1vw;
+  font-weight: 600;
 }
 
 .account-tag.selected {
-    background-color: black;
-    color: white;
-    border-color: transparent;
+  background-color: black;
+  color: white;
+  border-color: transparent;
 }
 
 .bio-prompt {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin-top: 1vw;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 1vw;
 }
 
 .bio-prompt label {
-    font-size: 1vw;
-    font-weight: 600;
-    margin-bottom: 0.5vw;
+  font-size: 1vw;
+  font-weight: 600;
+  margin-bottom: 0.5vw;
 }
 
 .bio-prompt input {
-    height: 2.25vw;
-    border-radius: 0.5vw;
-    padding: 0.5vw 1vw;
-    border: 1px solid #ccc;
-    font-size: 1vw;
+  height: 2.25vw;
+  border-radius: 0.5vw;
+  padding: 0.5vw 1vw;
+  border: 1px solid #ccc;
+  font-size: 1vw;
 }
 
 .niche {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin-top: 1vw;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 1vw;
 }
 
 .niche label {
-    font-size: 1vw;
-    font-weight: 600;
-    margin-bottom: 0.5vw;
+  font-size: 1vw;
+  font-weight: 600;
+  margin-bottom: 0.5vw;
 }
-
 
 .niche-tags {
-    display: grid;
-    grid-template-columns: repeat(4, 24%);
-    gap: 1%; 
-    text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 24%);
+  gap: 1%;
+  text-align: center;
 }
-  
+
 .niche-tag {
-    cursor: pointer;
-    padding: 0.5vw 1vw;
-    border: 0.125vw solid black;
-    border-radius: 2vw;
-    transition: background-color 0.3s, color 0.3s;
-    font-size: 0.9vw;
-    font-weight: 600;
+  cursor: pointer;
+  padding: 0.5vw 1vw;
+  border: 0.125vw solid black;
+  border-radius: 2vw;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 0.9vw;
+  font-weight: 600;
 }
-  
-  .niche-tag.selected {
-    background-color: black;
-    color: white;
+
+.niche-tag.selected {
+  background-color: black;
+  color: white;
 }
-  
+
 .media-upload {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .media-upload p {
-    font-size: 1vw;
-    margin-bottom: 0.5vw;
-    margin-top: 0.5vw;
+  font-size: 1vw;
+  margin-bottom: 0.5vw;
+  margin-top: 0.5vw;
 }
 
 .profile-picture {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 0.5vw;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 0.5vw;
+}
+
+.container {
+  position: relative; /* Set the container to a relative position */
+  width: 300px; /* Set a width for the container (adjust as needed) */
+  height: 300px; /* Set a height for the container (adjust as needed) */
+  border: 1px solid #ccc; /* Optional: Add a border for better visualization */
+}
+
+.img-upload {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: auto;
+  margin-top: 0.5vw;
 }
 
 .profile-picture p {
-    font-weight: 600;
-    margin-bottom: 0.5vw;
+  font-weight: 600;
+  margin-bottom: 0.5vw;
 }
 
 .profile-picture label {
-    font-size: 1vw;
-    font-weight: 600;
+  font-size: 1vw;
+  font-weight: 600;
 }
 
 .profile-picture input[type="file"] {
-    display: none; 
+  display: none;
 }
 
 .profile-picture label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 0.125vw dashed #ccc;
-    border-radius: 0.5vw;
-    width: 7vw;
-    height: 10vw; 
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.125vw dashed #ccc;
+  border-radius: 0.5vw;
+  width: 7vw;
+  height: 10vw;
+  cursor: pointer;
 }
 
 .plus-icon {
-    font-size: 2vw;
-    margin-bottom: 0.25vw;
+  font-size: 2vw;
+  margin-bottom: 0.25vw;
 }
 
 .profile-picture label:hover {
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
 .account-posts {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0.5vw;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5vw;
 }
 
 .posts {
-    display: flex;
-    flex-direction: row;
-    gap: 2%;
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
 }
 
 .account-posts p {
-    font-size: 1vw;
-    font-weight: 600;
-    margin-bottom: 0.5vw;
+  font-size: 1vw;
+  font-weight: 600;
+  margin-bottom: 0.5vw;
 }
 
 .account-posts label {
-    font-size: 1vw;
-    font-weight: 600;
+  font-size: 1vw;
+  font-weight: 600;
 }
 
 .account-posts input[type="file"] {
-    display: none; /* Hide the file input */
+  display: none; /* Hide the file input */
 }
 
 .account-posts label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px dashed #ccc;
-    border-radius: 0.5vw;
-    width: 7vw;
-    height: 10vw; /* Square aspect ratio */
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #ccc;
+  border-radius: 0.5vw;
+  width: 7vw;
+  height: 10vw; /* Square aspect ratio */
+  cursor: pointer;
 }
-
 
 .account-posts label:hover {
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
-
 .account-reels {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .reels {
-    display: flex;
-    flex-direction: row;
-    gap: 2%;
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
 }
 
 .account-reels p {
-    font-size: 1vw;
-    font-weight: 600;
-    margin-bottom: 0.5vw;
-    margin-top: 1vw;
+  font-size: 1vw;
+  font-weight: 600;
+  margin-bottom: 0.5vw;
+  margin-top: 1vw;
 }
 
 .account-reels label {
-    font-size: 1vw;
-    font-weight: 600;
-    margin-bottom: 0.75vw;
+  font-size: 1vw;
+  font-weight: 600;
+  margin-bottom: 0.75vw;
 }
 
 .account-reels input[type="file"] {
-    display: none; /* Hide the file input */
+  display: none; /* Hide the file input */
 }
 
 .account-reels label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 0.125vw dashed #ccc;
-    border-radius: 0.5vw;
-    width: 7vw;
-    height: 10vw; /* Square aspect ratio */
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.125vw dashed #ccc;
+  border-radius: 0.5vw;
+  width: 7vw;
+  height: 10vw; /* Square aspect ratio */
+  cursor: pointer;
 }
 
-
 .account-reels label:hover {
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
 .create-account-button {
-    display: inline-block;
-    padding: 0.5vw 1vw;
-    background-color: white;
-    color: black;
-    font-size: 1.2vw;
-    font-weight: bold;
-    text-decoration: none;
-    border: 0.125vw solid black;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 2vw;
+  display: inline-block;
+  padding: 0.5vw 1vw;
+  background-color: white;
+  color: black;
+  font-size: 1.2vw;
+  font-weight: bold;
+  text-decoration: none;
+  border: 0.125vw solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 2vw;
 }
-  
+
 .create-account-button:hover {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 .account-tc {
-    margin-top: 2vw;
-    font-size: 0.75vw;
-    color: #777;
-    text-align: center;
-    margin-bottom: 1vw;
+  margin-top: 2vw;
+  font-size: 0.75vw;
+  color: #777;
+  text-align: center;
+  margin-bottom: 1vw;
 }
