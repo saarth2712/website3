@@ -136,6 +136,7 @@ const CreateAccount = () => {
     infoDict.current["bio"] = bio;
   };
   const handleReel1Change = (event) => {
+    console.log("here");
     const selectedFile = event.target.files[0];
     // setReel1(selectedFile);
 
@@ -149,8 +150,8 @@ const CreateAccount = () => {
     data.readAsDataURL(event.target.files[0]);
   };
   const handleReel2Change = (event) => {
+    console.log("reel2");
     const selectedFile = event.target.files[0];
-    // setReel2(selectedFile);
 
     const data = new FileReader();
     data.onload = function () {
@@ -343,33 +344,67 @@ const CreateAccount = () => {
           <div className="account-reels">
             <p> Reels </p>
             <div className="reels">
-              <label htmlFor="reels-input">
-                <div className="plus-icon">+</div>
-              </label>
-              <input
-                type="file"
-                accept="video/*"
-                id="reels-input"
-                onChange={handleReel1Change}
-              />
-              <label htmlFor="reels-input">
-                <div className="plus-icon">+</div>
-              </label>
-              <input
-                type="file"
-                accept="video/*"
-                id="reels-input"
-                onChange={handleReel2Change}
-              />
-              <label htmlFor="reels-input">
-                <div className="plus-icon">+</div>
-              </label>
-              <input
-                type="file"
-                accept="video/*"
-                id="reels-input"
-                onChange={handleReel3Change}
-              />
+              <>
+                {reel1 ? (
+                  <video controls width="300" height="200">
+                    <source src={reel1} type="video/*" />
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <>
+                    <label htmlFor="reels-input">
+                      <div className="plus-icon">+</div>
+                    </label>
+                    <input
+                      type="file"
+                      accept="video/*"
+                      id="reels-input"
+                      onChange={handleReel1Change}
+                    />
+                  </>
+                )}
+              </>
+
+              <>
+                {reel2 ? (
+                  <video controls width="300" height="200">
+                    <source src={reel2} type="video/*" />
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <>
+                    <label htmlFor="reels-input">
+                      <div className="plus-icon">+</div>
+                    </label>
+                    <input
+                      type="file"
+                      accept="video/*"
+                      id="reels-input"
+                      onChange={handleReel2Change}
+                    />
+                  </>
+                )}
+              </>
+              <>
+                {reel3 ? (
+                  <video controls width="300" height="200">
+                    <source src={reel3} type="video/*" />
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <>
+                    <label htmlFor="reels-input">
+                      <div className="plus-icon">+</div>
+                    </label>
+                    <input
+                      type="file"
+                      accept="video/*"
+                      id="reels-input"
+                      onChange={handleReel3Change}
+                    />
+                  </>
+                )}
+              </>
             </div>
           </div>
           <p> Upload atleast 1 post and 1 reel</p>
